@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Requisition</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <form>
+        <div></div>
+    </form>
+    <div class="contact-clean">
+        <form  style="width: 50%;/*margin-right: 0px;*//*margin-left: 0px;*/max-width: 75%;">
+            <h2 class="text-center">Requisition Form</h2>
+            <div class="form-group"><input class="form-control" type="text" name="name" placeholder="First Name  Last name"></div>
+            <div class="form-group"><input class="form-control is-invalid" type="email" name="email" placeholder="Task#"><small class="form-text text-danger">Please enter a correct email address.</small></div>
+            <div class="form-group"><label>Building/Dept</label><select class="form-control"><optgroup label="This is a group"><option value="12" selected="">This is item 1</option><option value="13">This is item 2</option><option value="14">This is item 3</option></optgroup></select></div>
+            <div
+                class="form-group"><label>Date Needed By:</label><input class="form-control" type="date">
+                <p></p>
+                <h4>Order Information</h4>
+                <hr>
+    </div>
+    <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Vendor"></div>
+    <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Tracking#"></div>
+    <div class="form-group"><label>Delivery Option</label>
+        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Plant Service Reciving Dock</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Job site</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Warehouse</label></div>
+    </div>
+    <fieldset>
+        <legend>Items</legend>
+        <div class="form-row" id="items-0" >
+            <div class="col-xl-1 offset-xl-0" style="width: 15%;padding-right: 0;padding-left: 0;"><input class="form-control form-control-sm" type="text" id="qty-0" name="qty-0" placeholder="QTY" style="width: 100%;padding: 0;padding-left: 7px;"></div>
+            <div class="col-xl-5" style="width: 55%;max-width: none;"><input class="form-control form-control-sm d-flex flex-fill" type="text" id="description-0" name="description-0" placeholder="Description" style="width: 100%;"></div>
+            <div class="col-xl-2" style="width: 15%;"><input class="form-control form-control-sm" type="text" id="uprice-0" name="uprice-0" placeholder="Unit Price" style="width: 100%;"></div>
+            <div class="col-xl-2" style="width: 15%;max-width: 15%;padding-right: 2px;padding-left: 2px;"><input class="form-control form-control-sm" type="text" id="tprice-0" placeholder="Total" style="width: 100%;" jAutoCalc="{qty} * {uprice}" readonly></div>
+            <div class="col-xl-2" style="width: 15%;"><button class="btn btn-primary" id="add" name="add" type="button" style="height: 42px;padding-top: 6px;padding-bottom: 6px;padding-right: 12px;padding-left: 12px;margin: 0px;background-color: rgb(10,105,54);">add</button></div>
+        </div>
+        <div class="form-group">
+            <div></div>
+        </div>
+    </fieldset>
+    <label>Total</label>
+    <div class="form-group">
+    <input class="form-control form-control-sm" id="gtotal" type="text" style="width: 81px;" Value= ""jAutoCalc="sum({tprice})"></div>
+    <button class="btn btn-primary" type="submit">Submit</button></form>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-3.4.1.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/itemscalc.js"></script>
+    <script src="assets/js/jautocalc.js"></script>
+    <script src="assets/js/jautocalc.js.map"></script>
+</body>
+
+</html>
